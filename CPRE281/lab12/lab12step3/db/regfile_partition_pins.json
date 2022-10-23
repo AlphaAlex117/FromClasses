@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DATAP[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATAP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATAP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATAP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATAQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATAQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATAQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATAQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LD_DATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "CLRN",
+					"strict" : false
+				},
+				{
+					"name" : "WA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "WA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "WR",
+					"strict" : false
+				},
+				{
+					"name" : "WA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LD_DATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LD_DATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LD_DATA[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,94 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+# Date created = 13:14:32  December 04, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		FinalProj_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY FinalProj
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:14:32  DECEMBER 04, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name BDF_FILE FinalProj.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AB21 -to AllowSet
+set_location_assignment PIN_AB22 -to AllowWrite
+set_location_assignment PIN_M23 -to Clock
+set_location_assignment PIN_AD21 -to CLRN
+set_location_assignment PIN_Y23 -to Switch[3]
+set_location_assignment PIN_Y24 -to Switch[2]
+set_location_assignment PIN_AA22 -to Switch[1]
+set_location_assignment PIN_AA23 -to Switch[0]
+set_location_assignment PIN_E25 -to STATE[2]
+set_location_assignment PIN_E22 -to STATE[1]
+set_location_assignment PIN_E21 -to STATE[0]
+set_location_assignment PIN_U24 -to ssdA[6]
+set_location_assignment PIN_U23 -to ssdA[5]
+set_location_assignment PIN_W25 -to ssdA[4]
+set_location_assignment PIN_W22 -to ssdA[3]
+set_location_assignment PIN_W21 -to ssdA[2]
+set_location_assignment PIN_Y22 -to ssdA[1]
+set_location_assignment PIN_M24 -to ssdA[0]
+set_location_assignment PIN_H22 -to ssdB[6]
+set_location_assignment PIN_G18 -to ssdB[0]
+set_location_assignment PIN_F22 -to ssdB[1]
+set_location_assignment PIN_E17 -to ssdB[2]
+set_location_assignment PIN_L26 -to ssdB[3]
+set_location_assignment PIN_L25 -to ssdB[4]
+set_location_assignment PIN_J22 -to ssdB[5]
+set_location_assignment PIN_AA17 -to ssdD[0]
+set_location_assignment PIN_AB16 -to ssdD[1]
+set_location_assignment PIN_AA16 -to ssdD[2]
+set_location_assignment PIN_AB17 -to ssdD[3]
+set_location_assignment PIN_AB15 -to ssdD[4]
+set_location_assignment PIN_AA15 -to ssdD[5]
+set_location_assignment PIN_AC17 -to ssdD[6]
+set_location_assignment PIN_AD17 -to ssdC[0]
+set_location_assignment PIN_AE17 -to ssdC[1]
+set_location_assignment PIN_AG17 -to ssdC[2]
+set_location_assignment PIN_AH17 -to ssdC[3]
+set_location_assignment PIN_AF17 -to ssdC[4]
+set_location_assignment PIN_AG18 -to ssdC[5]
+set_location_assignment PIN_AA14 -to ssdC[6]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

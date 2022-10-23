@@ -1,0 +1,26 @@
+# Compile of bcd_converter.v failed with 1 errors.
+# Compile of bcd_converter.v was successful.
+vsim -gui work.bcd_converter
+# vsim -gui work.bcd_converter 
+# Start time: 09:09:39 on Oct 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.bcd_converter(fast)
+add wave -position insertpoint  \
+sim:/bcd_converter/C0 \
+sim:/bcd_converter/S3 \
+sim:/bcd_converter/S2 \
+sim:/bcd_converter/S1 \
+sim:/bcd_converter/S0 \
+sim:/bcd_converter/N2X3 \
+sim:/bcd_converter/N2X2 \
+sim:/bcd_converter/N2X1 \
+sim:/bcd_converter/N2X0 \
+sim:/bcd_converter/N1X3 \
+sim:/bcd_converter/N1X2 \
+sim:/bcd_converter/N1X1 \
+sim:/bcd_converter/N1X0
+do Test.do
+# Causality operation skipped due to absence of debug database file
+quit -sim
+# End time: 09:18:17 on Oct 14,2021, Elapsed time: 0:08:38
+# Errors: 0, Warnings: 6

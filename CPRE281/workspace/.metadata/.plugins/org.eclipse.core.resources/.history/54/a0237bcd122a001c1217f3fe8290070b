@@ -1,0 +1,60 @@
+package hw6;
+
+import java.util.Scanner;
+
+public class part9 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		String binaryNum = input.next();
+		input.close();
+		
+		int decimalNum = 0;
+		String reverseBinary = "";
+		int bit = 7;
+		
+		System.out.println(binaryNum);
+		for (int j = 0; j <= binaryNum.length() - 1; ++j)
+		{
+			reverseBinary = binaryNum.charAt(j) + reverseBinary;
+		}
+		
+		System.out.println(reverseBinary);
+		for (int k = 0; k <= binaryNum.length() - 1; ++k)
+		{
+			
+		}
+		
+		System.out.println(binaryNum);
+		
+		// -------------------------------------------------------------
+		
+		
+		if (binaryNum.charAt(0) == '0')
+		{
+			for (int i = 1; i <= binaryNum.length() - 1; ++i)
+			{	
+				if (binaryNum.charAt(i) == '1')
+				{
+					decimalNum = decimalNum + (int)Math.pow(2, (binaryNum.length() - 1) - i);
+				}
+			}
+		}
+		else if (binaryNum.charAt(0) == '1')
+		{
+			for (int i = 1; i <= binaryNum.length() - 1; ++i)
+			{	
+				if (binaryNum.charAt(i) == '1')
+				{
+					decimalNum = decimalNum + (int)Math.pow(2, (binaryNum.length() - 1) - i);
+				}
+			}
+			decimalNum = -1 * ((int)Math.pow(2, bit) - decimalNum);
+		}
+		
+		System.out.println(decimalNum);
+		
+	}
+}

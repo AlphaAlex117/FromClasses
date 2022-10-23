@@ -1,0 +1,8 @@
+U:/CPRE281/lab6/bcd_converter/bcd_converter.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/lab6/bcd_converter/bcd_converter.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module bcd_converter
+
+Top level modules:
+	bcd_converter
+
+} {} {}}

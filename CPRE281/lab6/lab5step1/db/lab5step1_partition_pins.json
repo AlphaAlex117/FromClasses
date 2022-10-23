@@ -1,0 +1,185 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HEX7A",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7B",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7C",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7D",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7E",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7F",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7G",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6A",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6B",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6C",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6D",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6E",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6F",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6G",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5A",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5B",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5C",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5D",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5E",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5F",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5G",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4A",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4B",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4C",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4D",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4E",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4F",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4G",
+					"strict" : false
+				},
+				{
+					"name" : "SW14",
+					"strict" : false
+				},
+				{
+					"name" : "SW15",
+					"strict" : false
+				},
+				{
+					"name" : "SW16",
+					"strict" : false
+				},
+				{
+					"name" : "SW17",
+					"strict" : false
+				},
+				{
+					"name" : "SW10",
+					"strict" : false
+				},
+				{
+					"name" : "SW11",
+					"strict" : false
+				},
+				{
+					"name" : "SW12",
+					"strict" : false
+				},
+				{
+					"name" : "SW13",
+					"strict" : false
+				},
+				{
+					"name" : "SW5",
+					"strict" : false
+				},
+				{
+					"name" : "SW6",
+					"strict" : false
+				},
+				{
+					"name" : "SW7",
+					"strict" : false
+				},
+				{
+					"name" : "SW8",
+					"strict" : false
+				},
+				{
+					"name" : "SW1",
+					"strict" : false
+				},
+				{
+					"name" : "SW2",
+					"strict" : false
+				},
+				{
+					"name" : "SW3",
+					"strict" : false
+				},
+				{
+					"name" : "SW4",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

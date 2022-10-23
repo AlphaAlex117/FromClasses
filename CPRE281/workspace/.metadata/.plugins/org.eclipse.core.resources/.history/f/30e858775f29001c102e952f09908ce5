@@ -1,0 +1,18 @@
+package hw6;
+import java.util.Scanner;
+
+public class program1 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		double num = input.nextDouble();
+		input.close();
+		
+		System.out.println(num);
+		
+		
+	}
+
+}

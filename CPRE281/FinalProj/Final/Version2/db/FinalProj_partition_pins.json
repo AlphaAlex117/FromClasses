@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ssdA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ssdD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "STATE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "STATE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "CLRN",
+					"strict" : false
+				},
+				{
+					"name" : "AllowWrite",
+					"strict" : false
+				},
+				{
+					"name" : "AllowSet",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

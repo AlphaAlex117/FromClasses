@@ -1,0 +1,3 @@
+-- Author: Alexander Lafontaine
+
+The constraints that cannot be enforced with Figure 1 are UNIQUE attributes and ISA configurations.

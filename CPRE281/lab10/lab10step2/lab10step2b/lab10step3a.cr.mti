@@ -1,0 +1,40 @@
+U:/CPRE281/lab10/lab10step3/lab10step3a/jkff2_0.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/lab10/lab10step3/lab10step3a/jkff2_0.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module jkff2_0
+
+Top level modules:
+	jkff2_0
+
+} {} {}} U:/CPRE281/lab10/lab10step3/lab10step3a/jkff2_1.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/lab10/lab10step3/lab10step3a/jkff2_1.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module jkff2_1
+
+Top level modules:
+	jkff2_1
+
+} {} {}} U:/CPRE281/lab10/lab10step3/lab10step3a/lab10step3a.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/lab10/lab10step3/lab10step3a/lab10step3a.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module lab10step3a
+-- Compiling module jkff2_0
+-- Compiling module jkff2_1
+-- Compiling module jkff2_2
+-- Compiling module jkff2_3
+
+Top level modules:
+	lab10step3a
+
+} {} {}} U:/CPRE281/lab10/lab10step3/lab10step3a/jkff2_2.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/lab10/lab10step3/lab10step3a/jkff2_2.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module jkff2_2
+
+Top level modules:
+	jkff2_2
+
+} {} {}} U:/CPRE281/lab10/lab10step3/lab10step3a/jkff2_3.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/lab10/lab10step3/lab10step3a/jkff2_3.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module jkff2_3
+
+Top level modules:
+	jkff2_3
+
+} {} {}}

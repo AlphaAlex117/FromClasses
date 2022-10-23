@@ -1,0 +1,44 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2021.2/examples
+T_opt
+!s110 1633616178
+VkeY1j`NDn3N?>bP500GMF2
+04 13 4 work primedetector fast 0
+=1-1866da39d3bd-615f0130-24e-a84
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vprimedetector
+!s110 1633615985
+!i10b 1
+!s100 72H<L;>B0X>7lS9mVnzzf2
+IQVeINLlBP_OJAz88=lB<_1
+dU:/CPRE281/mProj/primedetector
+w1633615561
+8U:/CPRE281/mProj/primedetector/primedetector.v
+FU:/CPRE281/mProj/primedetector/primedetector.v
+!i122 0
+L0 1 7
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1633615984.000000
+!s107 U:/CPRE281/mProj/primedetector/primedetector.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/mProj/primedetector/primedetector.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0

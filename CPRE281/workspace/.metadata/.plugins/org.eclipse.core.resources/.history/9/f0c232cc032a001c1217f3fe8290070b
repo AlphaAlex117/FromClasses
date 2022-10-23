@@ -1,0 +1,25 @@
+package hw6;
+
+import java.util.Scanner;
+
+public class part7 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		String binaryNum = input.next();
+		input.close();
+		
+		System.out.println(binaryNum);
+		
+		int bit = 0;
+		
+		for (int i = 0; i <= binaryNum.length() - 1; ++i)
+		{
+			bit = (int)binaryNum.charAt(i);
+			System.out.print(bit);
+		}
+	}
+
+}

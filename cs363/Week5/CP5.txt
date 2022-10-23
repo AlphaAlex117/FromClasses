@@ -1,0 +1,52 @@
+1.
+
+Pharmacy(name, address, phone_num, primary key (name));
+Pharm_co(name, phone_num, primary key (name));
+Contract(start_date, end_date, text, supervisor, pharmacy_name, company_name, primary key (pharmacy_name, company_name), 
+foreign key (pharmacy_name) references pharmacy (name), foreign key (company_name) references pharm_co (name);
+
+
+2.
+
+Patient(ssn, name, date_of_birth, address, primary_physician_ssn not null, primary key (ssn),
+foreign key (primary_physician_ssn) references Doctor (phy_ssn));
+Doctor(phy_ssn, name, specialty, exp_years, primary key (phy_ssn));
+
+
+3.
+
+Course(CID, Section_ID, name, primary key (CID));
+section_course(CID, sectionID, primary key (CID, sectionID), foreign key (CID) references Course (CID) on delete cascade);
+Student(univId, fname, lname, address, primary key (CID, sectionID));
+assist(sid, cid, sectionid, semester, primary key (sid, cid, sectionid),
+foreign key (sid) references Student (univId), foreign key (cid, sectionid) references section_course(CID, sectionID));
+
+
+4.
+
+Course(CID, Section_ID, name, primary key (CID));
+section_course(CID, sectionID, primary key (CID, sectionID), foreign key (CID) references Course (CID) on delete cascade);
+Student(univId, fname, lname, address, primary key (CID, sectionID));
+Semester(sname, primary key (sname));
+assist(sid, cid, sectionid, semester, primary key (sid, cid, sectionid, semester),
+foreign key (sid) references Student (univId), foreign key (cid, sectionid) references section_course(CID, sectionID),
+foreign key (semester) references Semester (sname));
+
+
+5.
+
+State(stateCode, stateName, capitalCity, primary key (stateCode));
+TwitterAcc(handlerID, screenName, primary key (handlerID));
+
+Legislator(legisID, Type, Term, primary key (legisID));
+Citizen(passNum, primary key (passNum));
+PermResident(visaNum, primary key (visaNum));
+
+USResident(ssn, name, dob, gender, twitterID, primary key (ssn),
+foreign key (twitterID) references TwitterAcc (handlerID));
+
+residentOf(ssn is not null, stateCode, since, primary key (ssn, stateCode), 
+foreign key (ssn) references USResident(ssn), foreign key (stateCode) references State (stateCode));
+
+residentISA(ssn, legisID, passportNum, visaNum, primary key (ssn),
+foreign key (ssn) references USResident (ssn));

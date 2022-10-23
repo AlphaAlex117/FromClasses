@@ -1,0 +1,100 @@
+# Compile of add_sub.v was successful.
+# Compile of fourbit_adder.v was successful.
+# Compile of one_bit_fulladder.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.add_sub
+# vsim -gui work.add_sub 
+# Start time: 09:38:57 on Oct 21,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.add_sub(fast)
+add wave -position insertpoint  \
+sim:/add_sub/X3 \
+sim:/add_sub/Y3 \
+sim:/add_sub/X2 \
+sim:/add_sub/Y2 \
+sim:/add_sub/X1 \
+sim:/add_sub/Y1 \
+sim:/add_sub/X0 \
+sim:/add_sub/Y0 \
+sim:/add_sub/Control \
+sim:/add_sub/Overflow \
+sim:/add_sub/Cout \
+sim:/add_sub/S3 \
+sim:/add_sub/S2 \
+sim:/add_sub/S1 \
+sim:/add_sub/S0
+do Test.do
+# Causality operation skipped due to absence of debug database file
+quit -sim
+# End time: 09:41:52 on Oct 21,2021, Elapsed time: 0:02:55
+# Errors: 0, Warnings: 7
+vsim -gui work.add_sub
+# vsim -gui work.add_sub 
+# Start time: 09:53:12 on Oct 21,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.add_sub(fast)
+add wave -position insertpoint  \
+sim:/add_sub/X3 \
+sim:/add_sub/Y3 \
+sim:/add_sub/X2 \
+sim:/add_sub/Y2 \
+sim:/add_sub/X1 \
+sim:/add_sub/Y1 \
+sim:/add_sub/X0 \
+sim:/add_sub/Y0 \
+sim:/add_sub/Control \
+sim:/add_sub/Overflow \
+sim:/add_sub/Cout \
+sim:/add_sub/S3 \
+sim:/add_sub/S2 \
+sim:/add_sub/S1 \
+sim:/add_sub/S0
+add wave -position insertpoint  \
+sim:/add_sub/X3 \
+sim:/add_sub/Y3 \
+sim:/add_sub/X2 \
+sim:/add_sub/Y2 \
+sim:/add_sub/X1 \
+sim:/add_sub/Y1 \
+sim:/add_sub/X0 \
+sim:/add_sub/Y0 \
+sim:/add_sub/Control \
+sim:/add_sub/Overflow \
+sim:/add_sub/Cout \
+sim:/add_sub/S3 \
+sim:/add_sub/S2 \
+sim:/add_sub/S1 \
+sim:/add_sub/S0
+do Test.do
+quit -sim
+# End time: 09:54:34 on Oct 21,2021, Elapsed time: 0:01:22
+# Errors: 0, Warnings: 1
+vsim -gui work.add_sub
+# vsim -gui work.add_sub 
+# Start time: 09:55:57 on Oct 21,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.add_sub(fast)
+add wave -position insertpoint  \
+sim:/add_sub/X3 \
+sim:/add_sub/Y3 \
+sim:/add_sub/X2 \
+sim:/add_sub/Y2 \
+sim:/add_sub/X1 \
+sim:/add_sub/Y1 \
+sim:/add_sub/X0 \
+sim:/add_sub/Y0 \
+sim:/add_sub/Control \
+sim:/add_sub/Overflow \
+sim:/add_sub/Cout \
+sim:/add_sub/S3 \
+sim:/add_sub/S2 \
+sim:/add_sub/S1 \
+sim:/add_sub/S0
+do Test.do
+do Test2.do
+do Test3.do
+do Test4.do
+do Test5.do
+do Test6.do
+# End time: 10:04:51 on Oct 21,2021, Elapsed time: 0:08:54
+# Errors: 0, Warnings: 1

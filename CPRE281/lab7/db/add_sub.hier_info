@@ -1,0 +1,116 @@
+|add_sub
+Overflow <= fourbit_adder:inst.Oflow
+X3 => fourbit_adder:inst.X3
+Control => inst2.IN0
+Control => inst3.IN0
+Control => inst4.IN0
+Control => inst5.IN0
+Control => fourbit_adder:inst.Cin
+Y3 => inst2.IN1
+X2 => fourbit_adder:inst.X2
+Y2 => inst3.IN1
+X1 => fourbit_adder:inst.X1
+Y1 => inst4.IN1
+X0 => fourbit_adder:inst.X0
+Y0 => inst5.IN1
+Cout <= fourbit_adder:inst.Cout
+S3 <= fourbit_adder:inst.S3
+S2 <= fourbit_adder:inst.S2
+S1 <= fourbit_adder:inst.S1
+S0 <= fourbit_adder:inst.S0
+
+
+|add_sub|fourbit_adder:inst
+Cout <= one_bit_fulladder:inst2.Cout
+X3 => one_bit_fulladder:inst2.X
+Y3 => one_bit_fulladder:inst2.Y
+X2 => one_bit_fulladder:inst.X
+Y2 => one_bit_fulladder:inst.Y
+X1 => one_bit_fulladder:inst3.X
+Y1 => one_bit_fulladder:inst3.Y
+X0 => one_bit_fulladder:inst4.X
+Y0 => one_bit_fulladder:inst4.Y
+Cin => one_bit_fulladder:inst4.Cin
+S3 <= one_bit_fulladder:inst2.S
+S2 <= one_bit_fulladder:inst.S
+S1 <= one_bit_fulladder:inst3.S
+S0 <= one_bit_fulladder:inst4.S
+Oflow <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub|fourbit_adder:inst|one_bit_fulladder:inst2
+X => Cout.IN0
+X => Cout.IN0
+X => Cout.IN0
+X => S.IN0
+Y => Cout.IN1
+Y => Cout.IN1
+Y => Cout.IN1
+Y => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub|fourbit_adder:inst|one_bit_fulladder:inst
+X => Cout.IN0
+X => Cout.IN0
+X => Cout.IN0
+X => S.IN0
+Y => Cout.IN1
+Y => Cout.IN1
+Y => Cout.IN1
+Y => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub|fourbit_adder:inst|one_bit_fulladder:inst3
+X => Cout.IN0
+X => Cout.IN0
+X => Cout.IN0
+X => S.IN0
+Y => Cout.IN1
+Y => Cout.IN1
+Y => Cout.IN1
+Y => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub|fourbit_adder:inst|one_bit_fulladder:inst4
+X => Cout.IN0
+X => Cout.IN0
+X => Cout.IN0
+X => S.IN0
+Y => Cout.IN1
+Y => Cout.IN1
+Y => Cout.IN1
+Y => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+

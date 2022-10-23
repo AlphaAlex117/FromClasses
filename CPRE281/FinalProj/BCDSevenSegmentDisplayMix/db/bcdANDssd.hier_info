@@ -1,0 +1,87 @@
+|bcdANDssd
+0A <= seven_seg_decoder:inst1.A
+In[0] => bcd_converter:inst3.S0
+In[1] => bcd_converter:inst3.S1
+In[2] => bcd_converter:inst3.S2
+In[3] => bcd_converter:inst3.S3
+0B <= seven_seg_decoder:inst1.B
+0C <= seven_seg_decoder:inst1.C
+0D <= seven_seg_decoder:inst1.D
+0E <= seven_seg_decoder:inst1.E
+0F <= seven_seg_decoder:inst1.F
+0G <= seven_seg_decoder:inst1.G
+1A <= seven_seg_decoder:inst4.A
+1B <= seven_seg_decoder:inst4.B
+1C <= seven_seg_decoder:inst4.C
+1D <= seven_seg_decoder:inst4.D
+1E <= seven_seg_decoder:inst4.E
+1F <= seven_seg_decoder:inst4.F
+1G <= seven_seg_decoder:inst4.G
+
+
+|bcdANDssd|seven_seg_decoder:inst1
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+
+
+|bcdANDssd|bcd_converter:inst3
+S0 => N1X0.DATAIN
+S1 => N2X0.IN1
+S1 => N2X0.IN1
+S1 => N1X3.IN1
+S1 => N1X2.IN1
+S1 => N1X1.IN1
+S1 => N1X1.IN1
+S1 => N1X1.IN1
+S1 => N1X3.IN1
+S1 => N1X3.IN1
+S1 => N1X2.IN1
+S1 => N1X1.IN1
+S2 => N2X1.IN1
+S2 => N2X0.IN1
+S2 => N2X0.IN1
+S2 => N1X2.IN1
+S2 => N2X0.IN1
+S2 => N2X0.IN1
+S2 => N1X2.IN1
+S3 => N2X1.IN0
+S3 => N2X0.IN0
+S3 => N2X1.IN0
+S3 => N1X2.IN0
+C0 => N2X1.IN1
+C0 => N2X1.IN1
+C0 => N2X0.IN1
+C0 => N1X2.IN1
+N2X3 <= <GND>
+N2X2 <= <GND>
+N2X1 <= N2X1.DB_MAX_OUTPUT_PORT_TYPE
+N2X0 <= N2X0.DB_MAX_OUTPUT_PORT_TYPE
+N1X3 <= N1X3.DB_MAX_OUTPUT_PORT_TYPE
+N1X2 <= N1X2.DB_MAX_OUTPUT_PORT_TYPE
+N1X1 <= N1X1.DB_MAX_OUTPUT_PORT_TYPE
+N1X0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdANDssd|seven_seg_decoder:inst4
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+
+

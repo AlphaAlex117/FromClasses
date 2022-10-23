@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="edu.iastate.cs228.hw1.Living"/>
+    <fullyQualifiedTypeName name="edu.iastate.cs228.hw2.Point"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="edu.iastate.cs228.hw2.Algorithm"/>
+    <fullyQualifiedTypeName name="edu.iastate.cs228.hw2.PointScanner"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.util.ListIterator"/>
+    <fullyQualifiedTypeName name="src.edu.iastate.cs228.hw3.MultiList"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="org.junit.Before"/>
+    <fullyQualifiedTypeName name="edu.iastate.cs228.hw4.SplayTree"/>
+    <fullyQualifiedTypeName name="edu.iastate.cs228.hw4.Video"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="hw4.VideoStoreTest"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,29 @@
+package exam3;
+
+public class ExerciseOneA
+{
+
+	public static int RecursiveMethod(int numBricks)
+	{
+		if (numBricks < 0)
+		{
+			return 0;
+		}
+		else if (numBricks == 0)
+		{
+			return 1;
+		}
+		else
+		{
+			return RecursiveMethod(numBricks - 1) + RecursiveMethod(numBricks - 2) + RecursiveMethod(numBricks - 3);
+		}
+	}
+	
+	
+	
+	public static void main(String[] args)
+	{
+		System.out.println(RecursiveMethod(3));
+	}
+
+}

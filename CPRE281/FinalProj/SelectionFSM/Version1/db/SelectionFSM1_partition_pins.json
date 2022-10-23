@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "En",
+					"strict" : false
+				},
+				{
+					"name" : "Control",
+					"strict" : false
+				},
+				{
+					"name" : "Calc",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "Clear_n",
+					"strict" : false
+				},
+				{
+					"name" : "Select",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

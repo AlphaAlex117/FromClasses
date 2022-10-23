@@ -1,0 +1,106 @@
+# Compile of lab10step2a.v was successful.
+vsim -gui work.lab10step2a
+# vsim -gui work.lab10step2a 
+# Start time: 09:32:35 on Nov 11,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.lab10step2a(fast)
+add wave -position insertpoint  \
+sim:/lab10step2a/Enable \
+sim:/lab10step2a/CLRN \
+sim:/lab10step2a/Clock \
+sim:/lab10step2a/Q
+do lab10counter.do
+quit -sim
+# End time: 09:50:31 on Nov 11,2021, Elapsed time: 0:17:56
+# Errors: 0, Warnings: 5
+# reading C:/questasim64_2021.2/win64/../modelsim.ini
+# Loading project lab10step2b
+# Compile of lab10step2b.v was successful.
+vsim -gui work.lab10step2b
+# vsim -gui work.lab10step2b 
+# Start time: 09:52:30 on Nov 11,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.lab10step2b(fast)
+add wave -position insertpoint  \
+sim:/lab10step2b/Enable \
+sim:/lab10step2b/Clock \
+sim:/lab10step2b/CLRN \
+sim:/lab10step2b/Q
+do lab10counter.do
+quit -sim
+# End time: 09:55:57 on Nov 11,2021, Elapsed time: 0:03:27
+# Errors: 0, Warnings: 5
+# reading C:/questasim64_2021.2/win64/../modelsim.ini
+# Loading project lab10step3a
+# Compile of lab10step2b.v was successful.
+vsim -gui work.lab10step2b
+# vsim -gui work.lab10step2b 
+# Start time: 10:10:58 on Nov 11,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.lab10step2b(fast)
+add wave -position insertpoint  \
+sim:/lab10step2b/Enable \
+sim:/lab10step2b/Clock \
+sim:/lab10step2b/CLRN \
+sim:/lab10step2b/Q
+do lab10counter.do
+quit -sim
+# End time: 10:15:26 on Nov 11,2021, Elapsed time: 0:04:28
+# Errors: 0, Warnings: 5
+# Compile of jkff2_0.v was successful.
+# Compile of jkff2_1.v was successful.
+# Compile of jkff2_2.v was successful.
+# Compile of jkff2_3.v was successful.
+# Compile of lab10step3a.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.lab10step3a
+# vsim -gui work.lab10step3a 
+# Start time: 10:16:16 on Nov 11,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.lab10step3a(fast)
+add wave -position insertpoint  \
+sim:/lab10step3a/Clock \
+sim:/lab10step3a/CLRN \
+sim:/lab10step3a/Q
+do lab10counter.do
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Enable' not found.
+# Error in macro ./lab10counter.do line 6
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Enable' not found.
+# 
+#     while executing
+# "force Enable 0 0, 1 100, 0 1900, 1 2100"
+do lab10counter.do
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Enable' not found.
+# Error in macro ./lab10counter.do line 6
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Enable' not found.
+# 
+#     while executing
+# "force Enable 0 0, 1 100, 0 1900, 1 2100"
+do lab10counter.do
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Enable' not found.
+# Error in macro ./lab10counter.do line 6
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Enable' not found.
+# 
+#     while executing
+# "force Enable 0 0, 1 100, 0 1900, 1 2100"
+do jktest.do
+# Cannot open macro file: jktest.do
+quit -sim
+# End time: 10:19:12 on Nov 11,2021, Elapsed time: 0:02:56
+# Errors: 0, Warnings: 5
+vsim -gui work.lab10step3a
+# vsim -gui work.lab10step3a 
+# Start time: 10:19:24 on Nov 11,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.lab10step3a(fast)
+add wave -position insertpoint  \
+sim:/lab10step3a/Clock \
+sim:/lab10step3a/CLRN \
+sim:/lab10step3a/Q
+do jktest.do
+# Cannot open macro file: jktest.do
+force Clock 0 0, 1 50 -repeat 100
+do jktest.do
+# Cannot open macro file: jktest.do
+# End time: 10:20:54 on Nov 11,2021, Elapsed time: 0:01:30
+# Errors: 0, Warnings: 2

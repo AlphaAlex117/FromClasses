@@ -1,0 +1,19 @@
+package hw6;
+import java.util.Scanner;
+
+public class program1 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		String doubleNum = input.next();
+		
+		input.close();
+		
+		System.out.println(doubleNum.getBytes());
+		
+		
+	}
+
+}

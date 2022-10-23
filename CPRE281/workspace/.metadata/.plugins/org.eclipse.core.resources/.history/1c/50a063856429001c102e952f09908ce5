@@ -1,0 +1,35 @@
+package hw6;
+import java.util.Scanner;
+
+public class program1 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		double num = input.nextDouble();
+		input.close();
+		
+		int sign = 0;
+		
+		if (num < 0)
+		{
+			sign = 1;
+		}
+		
+		num = Math.abs(num);
+		int count = (int)num;
+		String binary = "";
+		
+		while (count >= 1)
+		{
+			binary = (count % 2) + binary;
+			count /= 2;
+		}
+		
+		System.out.println(binary);
+		
+		
+	}
+
+}

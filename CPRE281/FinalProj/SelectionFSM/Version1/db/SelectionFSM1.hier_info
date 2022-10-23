@@ -1,0 +1,30 @@
+|SelectionFSM1
+En <= DFF2:inst.Q
+Clock => DFF2:inst.CLK
+Clock => DFF2:inst1.CLK
+Calc => inst2.IN0
+Calc => inst3.IN0
+Clear_n => DFF2:inst.CLRN
+Clear_n => DFF2:inst1.CLRN
+Control <= DFF2:inst1.Q
+Select => inst6.IN0
+
+
+|SelectionFSM1|DFF2:inst
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => 3.ACLR
+CLK => 3.CLK
+D => 3.DATAIN
+PRN => 3.PRESET
+QN <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SelectionFSM1|DFF2:inst1
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => 3.ACLR
+CLK => 3.CLK
+D => 3.DATAIN
+PRN => 3.PRESET
+QN <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+

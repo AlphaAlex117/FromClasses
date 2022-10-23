@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DataOUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL7[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL7[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL7[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL7[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VAL3[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

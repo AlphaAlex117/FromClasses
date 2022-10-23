@@ -1,0 +1,56 @@
+package exam3;
+import java.util.ArrayList;
+
+public class ExerciseOneA
+{
+
+	public static int RecursiveMethod(int numBricks)
+	{
+		if (numBricks < 0)
+		{
+			return 0;
+		}
+		else if (numBricks == 0)
+		{
+			return 1;
+		}
+		else
+		{
+			return RecursiveMethod(numBricks - 1) + RecursiveMethod(numBricks - 2) + RecursiveMethod(numBricks - 3);
+		}
+	}
+	
+	public static ArrayList<String> SecondMethod(int numBricks)
+	{
+		ArrayList<String> differentPaths = new ArrayList<>();
+		String path = "";
+		
+		if ()
+		{
+			
+		}
+		else if()
+		{
+			
+		}
+		else
+		{
+			
+		}
+		
+		return differentPaths;
+	}
+	
+	public static void main(String[] args)
+	{
+		System.out.println(RecursiveMethod(3));
+		
+		ArrayList<String> list = SecondMethod(4);
+		
+		for (String path : list)
+		{
+			System.out.println(path);
+		}
+	}
+
+}

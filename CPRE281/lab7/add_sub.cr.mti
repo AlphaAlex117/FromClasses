@@ -1,0 +1,22 @@
+U:/CPRE281/lab7/one_bit_fulladder.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/lab7/one_bit_fulladder.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module one_bit_fulladder
+
+Top level modules:
+	one_bit_fulladder
+
+} {} {}} U:/CPRE281/lab7/fourbit_adder.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/lab7/fourbit_adder.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module fourbit_adder
+
+Top level modules:
+	fourbit_adder
+
+} {} {}} U:/CPRE281/lab7/add_sub.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/lab7/add_sub.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module add_sub
+
+Top level modules:
+	add_sub
+
+} {} {}}

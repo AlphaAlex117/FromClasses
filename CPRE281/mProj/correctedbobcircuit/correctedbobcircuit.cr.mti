@@ -1,0 +1,15 @@
+U:/CPRE281/mProj/correctedbobcircuit/correctedbobcircuit.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/mProj/correctedbobcircuit/correctedbobcircuit.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module correctedbobcircuit
+
+Top level modules:
+	correctedbobcircuit
+
+} {} {}} U:/CPRE281/mProj/correctedbobcircuit/bobcircuit.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/mProj/correctedbobcircuit/bobcircuit.v
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module bobcircuit
+
+Top level modules:
+	bobcircuit
+
+} {} {}}

@@ -1,0 +1,63 @@
+# Compile of lab3step2.v was successful.
+vsim -gui work.lab3step2
+# vsim -gui work.lab3step2 
+# Start time: 09:20:42 on Sep 16,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.lab3step2(fast)
+add wave -position insertpoint  \
+sim:/lab3step2/C \
+sim:/lab3step2/G \
+sim:/lab3step2/W \
+sim:/lab3step2/A
+do basic-alarm.do
+quit -sim
+# End time: 09:28:51 on Sep 16,2021, Elapsed time: 0:08:09
+# Errors: 0, Warnings: 5
+# reading C:/questasim64_2021.2/win64/../modelsim.ini
+# Loading project lab3step3
+# Compile of lab3step3.v was successful.
+vsim -gui work.lab3step3
+# vsim -gui work.lab3step3 
+# Start time: 09:33:05 on Sep 16,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.lab3step3(fast)
+add wave -position insertpoint  \
+sim:/lab3step3/F \
+sim:/lab3step3/C \
+sim:/lab3step3/G \
+sim:/lab3step3/W \
+sim:/lab3step3/A
+do advanced-alarm.do
+quit -sim
+# End time: 09:34:08 on Sep 16,2021, Elapsed time: 0:01:03
+# Errors: 0, Warnings: 5
+vsim -gui work.lab3step3
+# vsim -gui work.lab3step3 
+# Start time: 09:34:27 on Sep 16,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.lab3step3(fast)
+add wave -position insertpoint  \
+sim:/lab3step3/F \
+sim:/lab3step3/C \
+sim:/lab3step3/G \
+sim:/lab3step3/W \
+sim:/lab3step3/A
+do advanced-alarm.do
+quit -sim
+# End time: 09:35:26 on Sep 16,2021, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 1
+vsim -gui work.lab3step3
+# vsim -gui work.lab3step3 
+# Start time: 09:35:34 on Sep 16,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.lab3step3(fast)
+add wave -position insertpoint  \
+sim:/lab3step3/F \
+sim:/lab3step3/C \
+sim:/lab3step3/G \
+sim:/lab3step3/W \
+sim:/lab3step3/A
+do advanced-alarm.do
+quit -sim
+# End time: 09:39:08 on Sep 16,2021, Elapsed time: 0:03:34
+# Errors: 0, Warnings: 1

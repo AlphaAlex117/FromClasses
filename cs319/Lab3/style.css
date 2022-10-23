@@ -1,0 +1,34 @@
+div {
+    width: 314px;
+    height: 500px;
+    margin: 0 auto;
+    border: solid;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+h2 {
+    color: #f09b0a
+}
+
+img {
+    max-width: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+p {
+    width: 300px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.extra {
+    font-family: "Lucida-Console", "Courier New", monospace;
+}
+
+#wiki {
+    font-family: "Monaco", monospace;
+    font-style: italic;
+}

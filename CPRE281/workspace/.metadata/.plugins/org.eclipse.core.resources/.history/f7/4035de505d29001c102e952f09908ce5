@@ -1,0 +1,19 @@
+package hw6;
+import java.util.Scanner;
+import java.lang.Number;
+
+public class program1 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		input.useDelimiter(".");
+		String num = input.next();
+		
+		
+		System.out.println(num);
+		input.close();
+	}
+
+}

@@ -1,0 +1,56 @@
+package hw6;
+import java.util.Scanner;
+
+public class program1 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		double num = input.nextDouble();
+		input.close();
+		
+		int sign = 0;
+		if (num < 0)
+		{
+			sign = 1;
+		}
+		
+		num = Math.abs(num);
+		int count = (int)num;
+		double decimal = num - count;
+		int exponent = -1;
+		int bit = 0;
+		String binary1 = "";
+		
+		while (count >= 1)
+		{
+			bit = count % 2;
+			count /= 2;
+			if (count != 1)
+			{
+				binary1 = bit + binary1;
+			}
+			exponent = exponent + 1;
+		}
+		
+		int remove = 0;
+		String add = "";
+		
+		for (int i = 1; i <= 32; ++i)
+		{
+			decimal = decimal * 2;
+			remove = (int)decimal;
+			add = (add + remove);
+			decimal = decimal - remove;
+		}
+		
+		
+		System.out.println(binary1);
+		System.out.println(exponent);
+		System.out.println(add);
+		
+		String mantissa = "";
+	}
+
+}

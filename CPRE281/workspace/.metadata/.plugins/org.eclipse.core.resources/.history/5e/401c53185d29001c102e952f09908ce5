@@ -1,0 +1,18 @@
+package hw6;
+import java.util.Scanner;
+import java.lang.Byte;
+
+public class program1 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		String num = input.toString();
+		input.close();
+		
+		System.out.println(Byte.decode(num));
+		
+	}
+
+}

@@ -1,0 +1,29 @@
+|correctedbobcircuit
+P <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+W => inst2.IN0
+W => bobcircuit:inst.W
+W => inst4.IN0
+Y => inst6.IN1
+Y => bobcircuit:inst.Y
+Y => inst4.IN3
+Z => inst6.IN2
+Z => bobcircuit:inst.Z
+Z => inst4.IN1
+X => bobcircuit:inst.X
+X => inst4.IN2
+
+
+|correctedbobcircuit|bobcircuit:inst
+B <= B.DB_MAX_OUTPUT_PORT_TYPE
+W => B.IN0
+W => B.IN0
+X => B.IN0
+X => B.IN1
+Y => B.IN1
+Y => B.IN1
+Y => B.IN1
+Z => B.IN1
+Z => B.IN1
+Z => B.IN1
+
+

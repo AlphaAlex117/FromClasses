@@ -1,0 +1,11 @@
+1)
+a. The identifying relationship set of "Drug" is "Make".
+b. "Prescription" is unique because every patient has one primary doctor.
+c. The three way relationship is "Prescription".
+d. Yes
+
+2)
+a. Bold line from "Sponsors" to "Monitors" and an non-bold arrow from "Employees" to "Monitor".
+b. With the original case, every sponsor has a single unique employee.
+c. In this case, both "Sponsors" and "Employees" must has a bold arrow towards "Monitor" so that it becomes
+	a 1:1 relationship.

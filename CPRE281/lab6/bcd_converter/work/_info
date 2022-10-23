@@ -1,0 +1,44 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2021.2/examples
+T_opt
+!s110 1634220587
+V@8E1?P<bdF[X=Y]`8Na>T3
+04 13 4 work bcd_converter fast 0
+=1-1866da39d3bd-61683a29-1b3-2d40
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vbcd_converter
+!s110 1634220368
+!i10b 1
+!s100 =3V@L_<FLLD0j4O^OR8:;2
+I:?1=[CLj>LJoFO^bV7M3j1
+dU:/CPRE281/lab6/bcd_converter
+w1634220235
+8U:/CPRE281/lab6/bcd_converter/bcd_converter.v
+FU:/CPRE281/lab6/bcd_converter/bcd_converter.v
+!i122 0
+L0 1 15
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1634220367.000000
+!s107 U:/CPRE281/lab6/bcd_converter/bcd_converter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/lab6/bcd_converter/bcd_converter.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0

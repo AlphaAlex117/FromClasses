@@ -1,0 +1,253 @@
+// Alexander Lafontaine (AL2002) and Ainara Machargo (machargo)
+
+// ----- main Procedure -----
+ADDI X19, XZR, #128 // pointer of a[]
+ADDI X20, XZR, #100 // Size n
+
+ADDI X0, X19, #0    // Assign a[] as parameter for Fill
+ADDI X1, X20, #0    // Assign n as parameter for Fill
+BL Fill
+//HALT
+
+ADDI X0, X19, #0    // Assign a[] as parameter for bubble_sort
+ADDI X1, X20, #0    // Assign n as parameter for bubble_sort
+BL bubble_sort
+//HALT
+
+ADDI X1, X19, #0    // Assign a[] as parameter for BinarySearch
+ADDI X2, XZR, #0    // Assign 0 as parameter for BinarySearch
+SUBI X3, X20, #1    // Assign n-1 as parameter for BinarySearch
+ADDI X4, XZR, #0    // Assign 0 as parameter for BinarySearch
+BL BinarySearch
+//HALT
+
+ADDI X1, X19, #0    // Assign a[] as parameter for BinarySearch
+ADDI X2, XZR, #0    // Assign 0 as parameter for BinarySearch
+SUBI X3, X20, #1    // Assign n-1 as parameter for BinarySearch
+SUBI X4, X20, #1    // Assign n-1 as parameter for BinarySearch
+BL BinarySearch
+//HALT
+
+ADDI X1, X19, #0    // Assign a[] as parameter for BinarySearch
+ADDI X2, XZR, #0    // Assign 0 as parameter for BinarySearch
+SUBI X3, X20, #1    // Assign n-1 as parameter for BinarySearch
+LSR X4, X20, #1     // Assign n/2 as parameter for BinarySearch
+BL BinarySearch
+//HALT
+
+ADDI X1, X19, #0    // Assign a[] as parameter for BinarySearch
+ADDI X2, XZR, #0    // Assign 0 as parameter for BinarySearch
+SUBI X3, X20, #1    // Assign n-1 as parameter for BinarySearch
+ADDI X4, XZR, #100  // Assign 0 as parameter for BinarySearch
+BL BinarySearch
+//HALT
+
+ADDI X0, XZR, #0    // Result 0
+B Done              // Go to Done
+// ----- -------------- -----
+
+// ----- Fill Procedure -----
+Fill:
+ADDI X9, XZR, #0    // int i=0
+ADDI X11, X0, #0    // a[0]
+FillLoop:           // while()
+SUB X10, X1, X9     // X10 = n - i
+SUBI X10, X10, #1   // X10 = X10 - 1  
+STUR X10, [X11, #0] // Store in a[i] = n - i - 1
+ADDI X11, X11, #8   // a[i++]
+ADDI X9, X9, #1     // i++
+SUBS XZR, X9, X1    // Check if i < n
+B.LT FillLoop       // Go back to Loop if i < n is true
+BR LR               // Returns
+// ----- -------------- -----
+
+
+
+// ----- Swap Procedure -----
+Swap:
+LDUR X9, [X0, #0] // 9 has 0
+LDUR X10,[X1, #0] // 10 has 1
+STUR X9, [X1, #0] // 1 stores 9
+STUR X10,[X0, #0] // 0 stores 10
+BR LR
+// ----- -------------- -----
+
+
+
+// ----- bs_swap_pass Procedure -----
+BsSwapPass:
+ADDI X9, XZR, #1    // i = 1
+ADDI X10, XZR, #0   // num_swaps = 0
+
+BsLoop:             // while()
+SUBI X11, X9, #1    // i-1
+LSL X11, X11, #3    // (i-1) * 8
+LSL X12, X9, #3     // i * 8
+
+ADD X11, X11, X1    // a[i-1]
+ADD X12, X12, X1    // a[i]
+
+LDUR X13, [X11, #0] // Gets value at a[i-1]
+LDUR X14, [X12, #0] // Gets value at a[i]
+
+SUBS XZR, X13, X14  // Check if a[i-1] > a[i]
+B.LE JumpIf         // Jump if statement if a[i-1] <= a[i]
+SUBI SP, SP, #40    // Adjust Stack to add 
+STUR X19, [SP, #32] // Store what is on X19
+STUR X20, [SP, #24] // Store what is on X20
+STUR X21, [SP, #16] // Store what is on X21
+STUR X22, [SP, #8]  // Store what is on X22
+STUR LR, [SP, #0]   // Stores pointer in the SP
+
+ADDI X19, X1, #0    // Saves Parameter a[]
+ADDI X20, X2, #0    // Saves Parameter n
+ADDI X21, X9, #0    // Saves i
+ADDI X22, X10, #0   // Saves num_swaps
+
+ADDI X0, X11, #0    // Assigns pointer of a[i-1] as parameter for Swap
+ADDI X1, X12, #0    // Assigns pointer of a[i] as parameter for Swap
+BL Swap             // Goes to Swap
+
+ADDI X1, X19, #0    // Restores Parameter a[]
+ADDI X2, X20, #0    // Restores Parameter n
+ADDI X9, X21, #0    // Restores i
+ADDI X10, X22, #0   // Restores num_swaps
+
+LDUR LR, [SP, #0]   // Restores pointer in the SP
+LDUR X22, [SP, #8]  // Restores what was on X22
+LDUR X21, [SP, #16] // Restores what was on X21
+LDUR X20, [SP, #24] // Restores what was on X20
+LDUR X19, [SP, #32] // Restores what was on X19
+ADDI SP, SP, #40    // Adjust Stack to remove
+ADDI X10, X10, #1   // num_swaps++
+JumpIf:
+ADDI X9, X9, #1     // i++
+SUBS XZR, X9, X2    // Check if i < n
+B.LT BsLoop         // Go back to Loop if i < n is true
+ADDI X0, X10, #0    // Result num_swaps
+BR LR               // Returns
+// ----- ---------------------- -----
+
+
+
+// ----- bubble_sort Procedure -----
+bubble_sort:
+
+SUBI SP, SP, #24 // SP = SP - 20
+STUR X19, [SP, #16] // Store whats in 19 
+STUR X20, [SP, #8] //Store whats on 20
+STUR LR, [SP, #0] // Stores pointer in the SP
+
+//Go to a and n
+ORR X19, X0, XZR // int *a
+ORR X20, X1, XZR // int n
+
+bubble_sort_while: //gets int *a, int n
+
+//Set values for *a and n
+ORR X1, X19, XZR // int *a
+ORR X2, X20, XZR // int n
+
+BL BsSwapPass
+SUBIS XZR, X0, #0 //condition for loop: while xo !=0 
+B.NE bubble_sort_while //loop again
+
+// get data back from stack
+LDUR LR, [SP, #0] //Restore pointer
+LDUR X20, [SP, #8] //Restores 19
+LDUR X19, [SP, #16] //Restores 20
+ADDI SP, SP, #24 //Adjust stack to remove
+
+BR LR // return
+// ----- --------------------- -----
+
+
+
+// ----- binary_search Procedure -----
+BinarySearch:
+SUBS XZR, X3, X2    // Check if end < start
+B.GE JumpIfOne      // Jump if statement if end >= start
+SUBI X0, XZR, #1    // Result -1
+BR LR               // Return
+JumpIfOne:
+
+ADD X9, X2, X3      // index = start + end
+LSR X9, X9, #1      // index = index / 2
+LSL X10, X9, #3     // index * 8
+ADD X10, X1, X10    // a[index]
+LDUR X11, [X10, #0] // Get what is on a[index]
+SUBS XZR, X11, X4   // Check if value of a[index] == value
+B.NE JumpIfTwo      // Jump if statement if a[index] != value
+ADDI X0, X9, #0     // Result index
+BR LR               // Return
+JumpIfTwo:
+SUBS XZR, X11, X4   // Check if value of a[index] > value
+B.LT JumpIfThree    // Jump if statement if a[index] < value
+
+SUBI SP, SP, #40    // Adjust Stack to add 
+STUR X19, [SP, #32] // Store what is on X19
+STUR X20, [SP, #24] // Store what is on X20
+STUR X21, [SP, #16] // Store what is on X21
+STUR X22, [SP, #8]  // Store what is on X22
+STUR LR, [SP, #0]   // Stores pointer in the SP
+
+ADDI X19, X1, #0    // Saves Parameter a[]
+ADDI X20, X2, #0    // Saves Parameter start
+ADDI X21, X3, #0    // Saves Parameter end
+ADDI X22, X4, #0    // Saves Parameter value 
+
+ADDI X1, X1, #0     // Assigns a[] as parameter for BinarySearch
+ADDI X2, X2, #0     // Assigns start as parameter for BinarySearch
+SUBI X3, X9, #1     // Assigns index - 1 as parameter for BinarySearch
+ADDI X4, X4, #0     // Assigns value as parameter for BinarySearch
+BL BinarySearch     // Goes to BinarySearch
+
+ADDI X1, X19, #0    // Restores Parameter a[]
+ADDI X2, X20, #0    // Restores Parameter start
+ADDI X3, X21, #0    // Restores Parameter end
+ADDI X4, X22, #0    // Restores Parameter value
+
+LDUR LR, [SP, #0]   // Restores pointer in the SP
+LDUR X22, [SP, #8]  // Restores what was on X22
+LDUR X21, [SP, #16] // Restores what was on X21
+LDUR X20, [SP, #24] // Restores what was on X20
+LDUR X19, [SP, #32] // Restores what was on X19
+ADDI SP, SP, #40    // Adjust Stack to remove
+BR LR               // Return
+JumpIfThree:
+
+SUBI SP, SP, #40    // Adjust Stack to add 
+STUR X19, [SP, #32] // Store what is on X19
+STUR X20, [SP, #24] // Store what is on X20
+STUR X21, [SP, #16] // Store what is on X21
+STUR X22, [SP, #8]  // Store what is on X22
+STUR LR, [SP, #0]   // Stores pointer in the SP
+
+ADDI X19, X1, #0    // Saves Parameter a[]
+ADDI X20, X2, #0    // Saves Parameter start
+ADDI X21, X3, #0    // Saves Parameter end
+ADDI X22, X4, #0    // Saves Parameter value 
+
+ADDI X1, X1, #0     // Assigns a[] as parameter for BinarySearch
+ADDI X2, X9, #1     // Assigns index + 1 as parameter for BinarySearch
+ADDI X3, X3, #0     // Assigns end as parameter for BinarySearch
+ADDI X4, X4, #0     // Assigns value as parameter for BinarySearch
+
+BL BinarySearch     // Goes to BinarySearch
+
+ADDI X1, X19, #0    // Restores Parameter a[]
+ADDI X2, X20, #0    // Restores Parameter start
+ADDI X3, X21, #0    // Restores Parameter end
+ADDI X4, X22, #0    // Restores Parameter value
+
+LDUR LR, [SP, #0]   // Restores pointer in the SP
+LDUR X22, [SP, #8]  // Restores what was on X22
+LDUR X21, [SP, #16] // Restores what was on X21
+LDUR X20, [SP, #24] // Restores what was on X20
+LDUR X19, [SP, #32] // Restores what was on X19
+ADDI SP, SP, #40    // Adjust Stack to remove
+BR LR               // Return
+// ----- ----------------------- -----
+
+Done:
+HALT

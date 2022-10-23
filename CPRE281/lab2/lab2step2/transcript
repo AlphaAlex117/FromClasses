@@ -1,0 +1,37 @@
+# Compile of lab2step2.v was successful.
+# Load canceled
+vsim -gui work.lab2step2
+# vsim -gui work.lab2step2 
+# Start time: 09:24:36 on Sep 09,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.lab2step2(fast)
+add wave -position insertpoint  \
+sim:/lab2step2/W \
+sim:/lab2step2/G \
+sim:/lab2step2/C \
+sim:/lab2step2/Alarm
+force -freeze sim:/lab2step2/W 1'h0 0
+force -freeze sim:/lab2step2/G 1'h0 0
+force -freeze sim:/lab2step2/C 1'h0 0
+run 100
+force -freeze sim:/lab2step2/W 1'h1 0
+run 100
+force -freeze sim:/lab2step2/W 1'h0 0
+force -freeze sim:/lab2step2/G 1'h1 0
+run 100
+force -freeze sim:/lab2step2/W 1'h1 0
+run 100
+force -freeze sim:/lab2step2/C 1'h1 0
+force -freeze sim:/lab2step2/W 1'h0 0
+force -freeze sim:/lab2step2/G 1'h0 0
+run 100
+force -freeze sim:/lab2step2/W 1'h1 0
+run 100
+force -freeze sim:/lab2step2/W 1'h0 0
+force -freeze sim:/lab2step2/G 1'h1 0
+run 100
+force -freeze sim:/lab2step2/W 1'h1 0
+run 100
+quit
+# End time: 09:32:33 on Sep 09,2021, Elapsed time: 0:07:57
+# Errors: 0, Warnings: 6

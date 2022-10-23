@@ -1,0 +1,37 @@
+# Compile of correctedbobcircuit.v was successful.
+# Compile of bobcircuit.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.correctedbobcircuit
+# vsim -gui work.correctedbobcircuit 
+# Start time: 09:49:40 on Oct 07,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.correctedbobcircuit(fast)
+add wave -position insertpoint  \
+sim:/correctedbobcircuit/W \
+sim:/correctedbobcircuit/X \
+sim:/correctedbobcircuit/Y \
+sim:/correctedbobcircuit/Z \
+sim:/correctedbobcircuit/P
+do prime.do
+quit -sim
+# End time: 10:18:55 on Oct 07,2021, Elapsed time: 0:29:15
+# Errors: 0, Warnings: 6
+# Compile of correctedbobcircuit.v was successful.
+# Compile of bobcircuit.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.correctedbobcircuit
+# vsim -gui work.correctedbobcircuit 
+# Start time: 10:19:10 on Oct 07,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.correctedbobcircuit(fast)
+do prime.do
+add wave -position insertpoint  \
+sim:/correctedbobcircuit/W \
+sim:/correctedbobcircuit/X \
+sim:/correctedbobcircuit/Y \
+sim:/correctedbobcircuit/Z \
+sim:/correctedbobcircuit/P
+do prime.do
+do prime.do
+# End time: 10:27:00 on Oct 07,2021, Elapsed time: 0:07:50
+# Errors: 0, Warnings: 2

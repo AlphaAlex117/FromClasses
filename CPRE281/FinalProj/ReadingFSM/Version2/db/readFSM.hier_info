@@ -1,0 +1,31 @@
+|readFSM
+RA[0] <= DFF2:inst1.Q
+RA[1] <= DFF2:inst.Q
+RA[2] <= <GND>
+Clock => DFF2:inst1.CLK
+Clock => DFF2:inst.CLK
+AllowSet => inst8.IN0
+AllowSet => inst12.IN0
+AllowSet => inst2.IN0
+CLRN => DFF2:inst.CLRN
+CLRN => DFF2:inst1.CLRN
+
+
+|readFSM|DFF2:inst1
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => 3.ACLR
+CLK => 3.CLK
+D => 3.DATAIN
+PRN => 3.PRESET
+QN <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|readFSM|DFF2:inst
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => 3.ACLR
+CLK => 3.CLK
+D => 3.DATAIN
+PRN => 3.PRESET
+QN <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
