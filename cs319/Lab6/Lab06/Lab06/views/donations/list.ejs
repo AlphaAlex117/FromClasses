@@ -1,0 +1,72 @@
+<html>
+	<%- include("../partials/head.ejs") %>
+	<body>
+
+		<div class="container" >
+
+            <div class="row">
+                <div class="col-1" ></div>
+
+				<div class="col-10" >
+
+
+					<h1>319 Donations</h1>
+					<%- include("../partials/nav.ejs") %>
+			
+					<table class="table">
+						<thead>
+							<th> ID</th>
+							<th> Name</th>
+							<th> Email</th>
+							<th> Charity Name</th>
+							<th> Amount</th>
+							<th> </th>
+						</thead>
+						<tbody>
+								<% if (donations.length > 0) { %>
+									<% var total = 0 %>
+								<% donations.forEach(donation => { %>
+								<tr>
+									<td> <%= donation.id %> </td>
+									<td> <a href="/donations/<%= donation.id %>"> <%= donation.name %> </a> </td>
+									<td> <%= donation.email %> </td>
+									<td> <%= donation.charity %></td>
+									<td> $<%= donation.amount %> </td>
+									<td>
+										<form action="/donations" method="POST">
+											<input type="hidden" name="donation_id" value="<%= donation.id %>" />
+											<button type="submit" class="btn btn-danger"> x </button>
+										</form>
+									</td>
+									<% total += donation.amount %>
+								</tr>
+								<% }) %>
+								<% } %>
+
+								<tr>
+									<td> <b>Total</b> </td>
+									<td> </td>
+									<td> </td>
+									<td> $<%= total %> </td>
+									<td> </td>
+								</tr>
+			
+						</tbody>
+					
+					</table>
+			
+					<%- include("../partials/footer.ejs") %>
+
+
+				</div>
+
+				<div class="col-1"></div>
+            </div>
+
+        </div>
+
+
+
+
+	</body>
+</html>

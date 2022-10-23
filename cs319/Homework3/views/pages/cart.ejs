@@ -1,0 +1,460 @@
+<html>
+    <%- include("../partials/head.ejs") %>
+    <body>
+        <div class="container">
+            <div class="row">
+                <!-- Alert -->
+                <div id="liveAlertPlaceholder"></div>
+
+                <!-- Margin -->
+                <div class="col-2"></div>
+
+                <div class="row" id="mainRow">
+                    <!-- Margin -->
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <!--------------------------->
+                        <!-- This is the Cart Page -->
+                        <!--------------------------->
+                        <div class="" id="page2">
+
+                            <!-- Margin -->
+                            <div class="col-2"></div>
+            
+                            <div class="col-3">
+                                <!-- Return Button -->
+                                <form class="d-flex" id="return-form" action="/browse" method="GET">
+                                    <button type="submit" class="btn btn-secondary" id="returnButton">Return</button>
+                                </form>
+                            </div>
+                            <!-- Margin -->
+                            <div class="col-2"></div>
+                            
+                            <div class="col-2"></div>
+                                
+                            <!-- Table -->
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Item</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="collapse" id="juicer-row">
+                                        <th scope="row"> <img src="Juicer.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="juicer-amount"><%= globalCart.juicer %></td>
+                                        <td>$<%= checkoutPrices.juicerCheckoutPrice %></td>
+                                        <!--
+                                        <td id="juicer-amount">0</td>
+                                        <td id="juicer-price">$0</td>
+                                        -->
+                                    </tr>
+                                    <tr class="collapse" id="mug-row">
+                                        <th scope="row"> <img src="Mug.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="mug-amount"><%= globalCart.mug %></td>
+                                        <td>$<%= checkoutPrices.mugCheckoutPrice %></td>
+                                    </tr>
+                                    <tr class="collapse" id="toaster-row">
+                                        <th scope="row"> <img src="Toaster.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="toaster-amount"><%= globalCart.toaster %></td>
+                                        <td>$<%= checkoutPrices.toasterCheckoutPrice %></td>
+                                    </tr>
+                                    <tr class="collapse" id="pot-row">
+                                        <th scope="row"> <img src="Pot.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="pot-amount"><%= globalCart.pot %></td>
+                                        <td>$<%= checkoutPrices.potCheckoutPrice %></td>
+                                    </tr>
+                                    <tr class="collapse" id="kettle-row">
+                                        <th scope="row"> <img src="Kettle.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="kettle-amount"><%= globalCart.kettle %></td>
+                                        <td>$<%= checkoutPrices.kettleCheckoutPrice %></td>
+                                    </tr>
+                                    <tr class="collapse" id="silver-row">
+                                        <th scope="row"> <img src="Cutlery.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="silver-amount"><%= globalCart.silverware %></td>
+                                        <td>$<%= checkoutPrices.silverCheckoutPrice %></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td>TOTAL</td>
+                                        <td>$<%= checkoutPrices.totalCheckoutPrice %> + $11.50 TAX = $<%= checkoutPrices.totalTAXEDCheckoutPrice %></td>
+                                        <!--td id="total-price">$0 + $11.50 Tax = $11.50</td-->
+                                    </tr>
+                                </tbody>
+                            </table>
+                                
+                            <!-- Payment Info -->
+                            <h1>Payment Information</h1>
+
+                            <form class="row g-3" id="info-form" action="/cart" method="POST">
+                                <div class="col-md-6">
+                                    <label for="inputName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="inputName" name="nameInput">
+                                    <div class="error">
+                                        Must be like, "John Doe"
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" name="emailInput">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Must be like, "abc@xyz.efg"
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="inputCard" class="form-label">Card</label>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"><i class="bi-credit-card-fill"></i></span>
+                                        <input type="text" id="inputCard" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" aria-label="Username" aria-describedby="basic-addon1" name="cardInput">
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Must be like, "7777-7777-7777-7777"
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1Input">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Must be like, "121C Something"
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress2" class="form-label">Address 2</label>
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2Input">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputCity" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="inputCity" name="cityInput">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Must be like, "Ames"
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputState" class="form-label">State</label>
+                                    <select id="inputState" class="form-select" name="stateInput">
+                                        <option selected>Choose...</option>
+                                        <option>IA</option>
+                                        <option>PR</option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Select a valid state
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="inputZip" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip" name="zipInput">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Must be like, "0000"
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-success"> <i class="bi-bag-check"></i> Order</button>
+                                </div>
+                            </form>
+                        </div>
+                        <%- include("../partials/footer.ejs") %>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <!-- Margin -->
+                <div class="col-2"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                let juicerRow = document.getElementById('juicer-row')
+                let mugRow = document.getElementById('mug-row')
+                let toasterRow = document.getElementById('toaster-row')
+                let potRow = document.getElementById('pot-row')
+                let kettleRow = document.getElementById('kettle-row')
+                let silverRow = document.getElementById('silver-row')
+                
+                let juicerAmountText = document.getElementById('juicer-amount').innerText
+                let mugAmountText = document.getElementById('mug-amount').innerText
+                let toasterAmountText = document.getElementById('toaster-amount').innerText
+                let potAmountText = document.getElementById('pot-amount').innerText
+                let kettleAmountText = document.getElementById('kettle-amount').innerText
+                let silverAmountText = document.getElementById('silver-amount').innerText
+
+                if (parseInt(juicerAmountText) > 0)
+                {
+                    juicerRow.classList.remove('collapse')
+                }
+                else
+                {
+                    juicerRow.classList.add('collapse')
+                }
+                if (parseInt(mugAmountText) > 0)
+                {
+                    mugRow.classList.remove('collapse')
+                }
+                else
+                {
+                    mugRow.classList.add('collapse')
+                }
+                if (parseInt(toasterAmountText) > 0)
+                {
+                    toasterRow.classList.remove('collapse')
+                }
+                else
+                {
+                    toasterRow.classList.add('collapse')
+                }
+                if (parseInt(potAmountText) > 0)
+                {
+                    potRow.classList.remove('collapse')
+                }
+                else
+                {
+                    potRow.classList.add('collapse')
+                }
+                if (parseInt(kettleAmountText) > 0)
+                {
+                    kettleRow.classList.remove('collapse')
+                }
+                else
+                {
+                    kettleRow.classList.add('collapse')
+                }
+                if (parseInt(silverAmountText) > 0)
+                {
+                    silverRow.classList.remove('collapse')
+                }
+                else
+                {
+                    silverRow.classList.add('collapse')
+                }
+            }, false);
+        </script>
+        <script type="text/javascript">
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            const searchBarCart = document.getElementById('inputCard')
+            const alertTrigger = document.getElementById('submit-btn')
+            const infoForm = document.getElementById('info-form')
+            const summaryList = document.querySelector('.card > ul')
+
+            var order = {name:"",
+                email:"",
+                card:"",
+                address1:"",
+                city:"",
+                state:"",
+                zip:""
+                }
+
+            // Function to check if something is numeric.
+            function isNumeric(n) {
+                return !isNaN(parseFloat(n)) && isFinite(n);
+            }
+
+            const alert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert dismissible" role="alert">`,
+                `<div> ${message} </div>`,
+                '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper);
+            }
+
+            searchBarCart.addEventListener('input', event => {
+            if (!searchBarCart.value) {
+            return event.preventDefault()
+            }
+            else {
+            searchBarCart.value = searchBarCart.value.replace(/-/g, "")
+            let newVal = ""
+            for (var i = 0, nums = 0; i < searchBarCart.value.length; i++) {
+                if (nums != 0 && nums % 4 == 0) {
+                    newVal += "-"
+                }
+
+                newVal += searchBarCart.value[i]
+                if (isNumeric(searchBarCart.value[i])) {
+                    nums++
+                }
+            }
+            searchBarCart.value = newVal
+            }
+            })
+
+            infoForm.addEventListener('submit', event => {
+            if (!validate()) {
+            alertPlaceholder.innerHTML = ""
+                alert('<i class="bi-exclamation-circle"></i> Something went wrong!', 'danger')
+            }
+            event.preventDefault()
+            event.stopPropagation()
+            }, false)
+
+
+            let validate = function(){
+            val = true;
+            let email = document.getElementById('inputEmail4')
+            let name = document.getElementById('inputName')
+            let card = document.getElementById('inputCard')
+
+            let address1 = document.getElementById('inputAddress')
+            let city = document.getElementById('inputCity')
+            let state = document.getElementById('inputState')
+            let zip = document.getElementById('inputZip')
+
+            if (!email.value.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            )){
+            email.setAttribute("class", "form-control is-invalid");
+            val = false;
+            }
+            else{
+            email.setAttribute("class", "form-control is-valid");
+            order.email = email.value
+            }
+
+            if (name.value.length == 0)
+            {
+            name.setAttribute("class","form-control is-invalid")
+            val = false
+            }
+            else{
+            name.setAttribute("class", "form-control is-valid");
+            order.name = name.value
+            }
+
+            if (!card.value.match(/^[0-9]{4}\-[0-9]{4}\-[0-9]{4}\-[0-9]{4}$/))
+            {
+            card.setAttribute("class","form-control is-invalid")
+            val = false
+            }
+            else{
+            card.setAttribute("class", "form-control is-valid");
+            order.card = card.value
+            }
+
+            if (address1.value.length == 0)
+            {
+            address1.setAttribute("class","form-control is-invalid")
+            val = false
+            }
+            else{
+            address1.setAttribute("class", "form-control is-valid");
+            order.address1 = address1.value
+            }
+
+            if (city.value.length == 0)
+            {
+            city.setAttribute("class","form-control is-invalid")
+            val = false
+            }
+            else{
+            city.setAttribute("class", "form-control is-valid");
+            order.city = city.value
+            }
+
+            if (state.value == null)
+            {
+            state.setAttribute("class","form-control is-valid")
+            val = false
+            }
+            else{
+            state.setAttribute("class", "form-control is-invalid");
+            order.state = state.value
+            }
+
+            if (zip.value.length == 0 || zip.value.length > 5)
+            {
+            zip.setAttribute("class","form-control is-invalid")
+            val = false
+            }
+            else{
+            zip.setAttribute("class", "form-control is-valid");
+            order.zip = zip.value
+            }
+
+
+            if (val){
+            let stuffBought = document.getElementById('stuff-bought')
+
+            page2.classList.add("collapse")
+
+            for (const [key, value] of Object.entries(order)) {
+            summaryList.innerHTML += '<li class="list-group-item"> <b>' + `${key}` + ': </b>' + `${value}` +'</li>'
+            }
+
+            // List of Objects
+            if (parseInt(cart.juicer) > 0)
+            {
+            createProductCard(stuffBought, "Juicer", cart.juicer, juicerPrice)
+            }
+            if (parseInt(cart.mug) > 0)
+            {
+            createProductCard(stuffBought, "Mug", cart.mug, mugPrice)
+            }
+            if (parseInt(cart.toaster) > 0)
+            {
+            createProductCard(stuffBought, "Toaster", cart.toaster, toasterPrice)
+            }
+            if (parseInt(cart.pot) > 0)
+            {
+            createProductCard(stuffBought, "Pot", cart.pot, potPrice)
+            }
+            if (parseInt(cart.kettle) > 0)
+            {
+            createProductCard(stuffBought, "Kettle", cart.kettle, kettlePrice)
+            }
+            if (parseInt(cart.silverware) > 0)
+            {
+            createProductCard(stuffBought, "Cutlery", cart.silverware, silverPrice)
+            }
+
+            // Total
+            const totalWrapper = document.createElement('div')
+            totalWrapper.innerHTML = [
+                '<div class="card">',
+                    '<div class="card-body">',
+                        '<h5 class="card-title">',
+                            `Total: $${(cart.juicer * juicerPrice + cart.mug * mugPrice + cart.toaster * toasterPrice + cart.pot * potPrice + cart.kettle * kettlePrice + cart.silverware * silverPrice + 11.50).toFixed(2)}`,
+                        '</h5>',
+                    '</div>',
+                '</div>'
+            ].join('')
+
+            stuffBought.append(totalWrapper);
+
+
+            page3.classList.remove("collapse")
+            alertPlaceholder.innerHTML = ""
+            alert('<i class="bi-cart-check-fill"></i> You have made an order!', 'success')
+            }
+            return val;
+            }
+        </script>
+    </body>
+</html>

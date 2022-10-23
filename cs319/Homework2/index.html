@@ -1,0 +1,360 @@
+<html>
+    <head>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="row">
+                <!-- Alert -->
+                <div id="liveAlertPlaceholder"></div>
+
+                <!-- Margin -->
+                <div class="col-2"></div>
+
+                <div class="row" id="mainRow">
+                    <!-- Margin -->
+                    <div class="col-2"></div>
+                    <div class="col-8">
+
+                        <!------------------------------->
+                        <!-- This is the Browsing Page -->
+                        <!------------------------------->
+                        <div class="" id="page1">
+                            <!-- Margin -->
+                            <div class="col-2"></div>
+                            
+                            <div class="col-5">
+                            
+                                <!-- SearchBar -->
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" id="search-bar" placeholder="Search Item" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="button" id="clear-button">Clear</button>
+                                </form>
+                            </div>
+                            <div class="col">
+                                <!-- Checkout Button -->
+                                <form class="d-grid gap-2 d-md-flex justify-content-md-end" id="checkout-form">
+                                    <button type="submit" class="btn btn-primary" id="checkout-button">Checkout</button>
+                                </form>
+                            </div>
+
+                            <!-- Margin -->
+                            <div class="col-2"></div>
+                            
+                            <!-- Grid Card -->
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <!-- Product Card -->
+                                <div class="col" id="juicer-card">
+                                    <div class="card">
+                                        <img src="Juicer.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <!-- Price and Name -->
+                                                <span class="badge rounded-pill text-bg-success">$99.99</span>
+                                                Juicer
+                                            </h5>
+                                            <!-- Information -->
+                                            <p class="card-text">Use it to get that juice.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Amount of the Product -->
+                                    <div class="input-group">
+                                        <input id="juicer-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff">
+                                        <button id="juicer-+" class="btn btn-outline-secondary" type="button">+</button>
+                                        <button id="juicer--" class="btn btn-outline-secondary" type="button">-</button>
+                                    </div>
+                                </div>
+                                <div class="col" id="mug-card">
+                                    <div class="card">
+                                        <img src="Mug.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <span class="badge rounded-pill text-bg-success">$19.99</span>
+                                                Mug
+                                            </h5>
+                                            <p class="card-text">This is what Mugman is made of. Use it to drink the good stuff (coffee).</p>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <input id="mug-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff">
+                                        <button id="mug-+" class="btn btn-outline-secondary" type="button">+</button>
+                                        <button id="mug--" class="btn btn-outline-secondary" type="button">-</button>
+                                    </div>
+                                </div>
+                                <div class="col" id="toaster-card">
+                                    <div class="card">
+                                        <img src="Toaster.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <span class="badge rounded-pill text-bg-success">$199.99</span>
+                                                Toaster
+                                            </h5>
+                                            <p class="card-text">Essential to burn the bread.</p>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <input id="toaster-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff">
+                                        <button id="toaster-+" class="btn btn-outline-secondary" type="button">+</button>
+                                        <button id="toaster--" class="btn btn-outline-secondary" type="button">-</button>
+                                    </div>
+                                </div>
+                                <div class="col" id="pot-card">
+                                    <div class="card">
+                                        <img src="Pot.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <span class="badge rounded-pill text-bg-success">$249.99</span>
+                                                Pot
+                                            </h5>
+                                            <p class="card-text">It is bigger on the inside than the outside. Has TARDIS tech.</p>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <input id="pot-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff">
+                                        <button id="pot-+" class="btn btn-outline-secondary" type="button">+</button>
+                                        <button id="pot--" class="btn btn-outline-secondary" type="button">-</button>
+                                    </div>
+                                </div>
+                                <div class="col" id="kettle-card">
+                                    <div class="card">
+                                        <img src="Kettle.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <span class="badge rounded-pill text-bg-success">$119.99</span>
+                                                Kettle
+                                            </h5>
+                                            <p class="card-text">You can heat the good stuff (coffee).</p>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <input id="kettle-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff">
+                                        <button id="kettle-+" class="btn btn-outline-secondary" type="button">+</button>
+                                        <button id="kettle--" class="btn btn-outline-secondary" type="button">-</button>
+                                    </div>
+                                </div>
+                                <div class="col" id="silver-card">
+                                    <div class="card">
+                                        <img src="Cutlery.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <span class="badge rounded-pill text-bg-success">$59.99</span>
+                                                Silverware
+                                            </h5>
+                                            <p class="card-text">This is just for eating. WARNING: Do not let kids from 12th grade or below use silverware in school. The dangers are __________. Thank you.</p>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <input id="silver-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff">
+                                        <button id="silver-+" class="btn btn-outline-secondary" type="button">+</button>
+                                        <button id="silver--" class="btn btn-outline-secondary" type="button">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>       
+                    
+
+                        <!--------------------------->
+                        <!-- This is the Cart Page -->
+                        <!--------------------------->
+                        <div class="collapse" id="page2">
+
+                            <!-- Margin -->
+                            <div class="col-2"></div>
+            
+                            <div class="col-3">
+                                <!-- Return Button -->
+                                <form class="d-flex" id="return-form">
+                                    <button type="submit" class="btn btn-secondary" id="returnButton">Return</button>
+                                </form>
+                            </div>
+                            <!-- Margin -->
+                            <div class="col-2"></div>
+                            
+                            <div class="col-2"></div>
+                                
+                            <!-- Table -->
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Item</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="collapse" id="juicer-row">
+                                        <th scope="row"> <img src="Juicer.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="juicer-amount">0</td>
+                                        <td id="juicer-price">$0</td>
+                                    </tr>
+                                    <tr class="collapse" id="mug-row">
+                                        <th scope="row"> <img src="Mug.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="mug-amount">0</td>
+                                        <td id="mug-price">$0</td>
+                                    </tr>
+                                    <tr class="collapse" id="toaster-row">
+                                        <th scope="row"> <img src="Toaster.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="toaster-amount">0</td>
+                                        <td id="toaster-price">$0</td>
+                                    </tr>
+                                    <tr class="collapse" id="pot-row">
+                                        <th scope="row"> <img src="Pot.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="pot-amount">0</td>
+                                        <td id="pot-price">$0</td>
+                                    </tr>
+                                    <tr class="collapse" id="kettle-row">
+                                        <th scope="row"> <img src="Kettle.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="kettle-amount">0</td>
+                                        <td id="kettle-price">$0</td>
+                                    </tr>
+                                    <tr class="collapse" id="silver-row">
+                                        <th scope="row"> <img src="Cutlery.png" class="img-thumbnail" alt="..."> </th>
+                                        <td id="silver-amount">0</td>
+                                        <td id="silver-price">$0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td>TOTAL</td>
+                                        <td id="total-price">$0 + $11.50 Tax = $11.50</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                                
+                            <!-- Payment Info -->
+                            <h1>Payment Information</h1>
+
+                            <form class="row g-3" id="info-form">
+                                <div class="col-md-6">
+                                    <label for="inputName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="inputName" >
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Must be like, "John Doe"
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" >
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Must be like, "abc@xyz.efg"
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="inputCard" class="form-label">Card</label>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"><i class="bi-credit-card-fill"></i></span>
+                                        <input type="text" id="inputCard" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" aria-label="Username" aria-describedby="basic-addon1">
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Must be like, "7777-7777-7777-7777"
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" >
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Must be like, "121C Something"
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress2" class="form-label">Address 2</label>
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputCity" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="inputCity" >
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Must be like, "Ames"
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputState" class="form-label">State</label>
+                                    <select id="inputState" class="form-select" >
+                                        <option selected>Choose...</option>
+                                        <option>IA</option>
+                                        <option>PR</option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Select a valid state
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="inputZip" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip" >
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Must be like, "0000"
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-success"> <i class="bi-bag-check"></i> Order</button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <!----------------------------------->
+                        <!-- This is the Confirmation Page -->
+                        <!----------------------------------->
+                        <div class="collapse" id="page3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Order summary</h5>
+                                  <p class="card-text">Here is a summary of your order.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                
+                                </ul>
+                                <div id="stuff-bought"></div>
+                                <a href="" onclick="location.reload()" class="btn btn-secondary"> <i class="bi-arrow-left-circle"></i> Return</a>
+                              </div>
+                        </div>
+
+
+                        <!-- Footer -->
+                        <footer class="bd-footer py-4 py-md-5 mt-5 bg-light">
+                            <div class="container py-4 py-md-5 px-4 px-md-3">
+                                <div class="row">
+                                    <div class="col-lg-12 mb-3">
+                                        <b>Com-S 319</b> Store cart
+                                    </div>  
+                                </div>
+                            </div>
+                        </footer>
+                        <!-- Margin -->
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

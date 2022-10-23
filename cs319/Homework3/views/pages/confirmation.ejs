@@ -1,0 +1,120 @@
+<html>
+    <%- include("../partials/head.ejs") %>
+    <body>
+        <div class="container">
+            <div class="row">
+                <!-- Margin -->
+                <div class="col-2"></div>
+
+                <div class="row" id="mainRow">
+                    <!-- Margin -->
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <!----------------------------------->
+                        <!-- This is the Confirmation Page -->
+                        <!----------------------------------->
+                        <div class="" id="page3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Order summary</h5>
+                                  <p class="card-text">Here is a summary of your order.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                
+                                </ul>
+                                <div id="stuff-bought"></div>
+                                
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <b>Name: <%= globalOrder.name %></b>
+                                        </h5>
+                                        <h5 class="card-title">
+                                            <b>Email: <%= globalOrder.email %></b>
+                                        </h5>
+                                        <h5 class="card-title">
+                                            <b>Card: <%= globalOrder.card %> </b>
+                                        </h5>
+                                        <h5 class="card-title">
+                                            <b>Address: <%= globalOrder.address1 %> <%= globalOrder.address2 %> </b>
+                                        </h5>
+                                        <h5 class="card-title">
+                                            <b>City: <%= globalOrder.city %></b>
+                                        </h5>
+                                        <h5 class="card-title">
+                                            <b>State: <%= globalOrder.state %></b>
+                                        </h5>
+                                        <h5 class="card-title">
+                                            <b>Zip: <%= globalOrder.zip %></b>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="Juicer.png" class="img-thumbnail" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Amount: <%= globalCart.juicer %> | Price: $<%= checkoutPrices.juicerCheckoutPrice %>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="Mug.png" class="img-thumbnail" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Amount: <%= globalCart.mug %> | Price: $<%= checkoutPrices.mugCheckoutPrice %>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="Toaster.png" class="img-thumbnail" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Amount: <%= globalCart.toaster %> | Price: $<%= checkoutPrices.toasterCheckoutPrice %>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="Pot.png" class="img-thumbnail" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Amount: <%= globalCart.pot %> | Price: $<%= checkoutPrices.potCheckoutPrice %>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="Kettle.png" class="img-thumbnail" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Amount: <%= globalCart.kettle %> | Price: $<%= checkoutPrices.kettleCheckoutPrice %>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="Cutlery.png" class="img-thumbnail" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Amount: <%= globalCart.silverware %> | Price: $<%= checkoutPrices.silverCheckoutPrice %>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            TOTAL: $<%= checkoutPrices.totalTAXEDCheckoutPrice %>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <a href="browse" onclick="location.href" class="btn btn-secondary"> <i class="bi-arrow-left-circle"></i> Return</a>
+                              </div>
+                        </div>
+                        <%- include("../partials/footer.ejs") %>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <!-- Margin -->
+                <div class="col-2"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

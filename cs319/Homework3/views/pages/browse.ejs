@@ -1,0 +1,441 @@
+<html>
+    <%- include("../partials/head.ejs") %>
+    <body>
+        <div class="container">
+            <div class="row">
+                <!-- Margin -->
+                <div class="col-2"></div>
+
+                <div class="row" id="mainRow">
+                    <!-- Margin -->
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <!------------------------------->
+                        <!-- This is the Browsing Page -->
+                        <!------------------------------->
+                        <div class="" id="page1">
+                            <!-- Margin -->
+                            <div class="col-2"></div>
+
+                            <div class="col-5">
+                            
+                                <!-- SearchBar -->
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" id="search-bar" placeholder="Search Item" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="button" id="clear-button">Clear</button>
+                                </form>
+                            </div>
+                            <div class="col">
+                                <!-- Checkout Button -->
+                                <form class="d-grid gap-2 d-md-flex justify-content-md-end" id="checkout-form">
+                                    <button type="submit" class="btn btn-primary" id="checkout-button" form="main-form" value="Update">Checkout</button>
+                                </form>
+                            </div>
+
+                            <!-- Margin -->
+                            <div class="col-2"></div>
+                            <form action="/browse" method="POST" id="main-form">
+                                <!-- SearchBar
+                                <input class="form-control me-2" type="search" id="search-bar" placeholder="Search Item" aria-label="Search">
+                                <button class="btn btn-outline-success" type="button" id="clear-button">Clear</button>
+                                <-- Checkout Button ->
+                                <button type="submit" class="btn btn-primary" id="checkout-button">Checkout</button> -->
+                                <!-- Grid Card -->
+                                <div class="row row-cols-1 row-cols-md-3 g-4">
+                                    <!-- Product Card -->
+                                    <div class="col" id="juicer-card">
+                                        <div class="card">
+                                            <img src="Juicer.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <!-- Price and Name -->
+                                                    <span class="badge rounded-pill text-bg-success">$99.99</span>
+                                                    Juicer
+                                                </h5>
+                                                <!-- Information -->
+                                                <p class="card-text">Use it to get that juice.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Amount of the Product -->
+                                        <div class="input-group">
+                                            <input id="juicer-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff" name="juicerInput">
+                                            <button id="juicer-+" class="btn btn-outline-secondary" type="button">+</button>
+                                            <button id="juicer--" class="btn btn-outline-secondary" type="button">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="col" id="mug-card">
+                                        <div class="card">
+                                            <img src="Mug.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <span class="badge rounded-pill text-bg-success">$19.99</span>
+                                                    Mug
+                                                </h5>
+                                                <p class="card-text">This is what Mugman is made of. Use it to drink the good stuff (coffee).</p>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <input id="mug-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff" name="mugInput">
+                                            <button id="mug-+" class="btn btn-outline-secondary" type="button">+</button>
+                                            <button id="mug--" class="btn btn-outline-secondary" type="button">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="col" id="toaster-card">
+                                        <div class="card">
+                                            <img src="Toaster.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <span class="badge rounded-pill text-bg-success">$199.99</span>
+                                                    Toaster
+                                                </h5>
+                                                <p class="card-text">Essential to burn the bread.</p>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <input id="toaster-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff" name="toasterInput">
+                                            <button id="toaster-+" class="btn btn-outline-secondary" type="button">+</button>
+                                            <button id="toaster--" class="btn btn-outline-secondary" type="button">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="col" id="pot-card">
+                                        <div class="card">
+                                            <img src="Pot.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <span class="badge rounded-pill text-bg-success">$249.99</span>
+                                                    Pot
+                                                </h5>
+                                                <p class="card-text">It is bigger on the inside than the outside. Has TARDIS tech.</p>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <input id="pot-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff" name="potInput">
+                                            <button id="pot-+" class="btn btn-outline-secondary" type="button">+</button>
+                                            <button id="pot--" class="btn btn-outline-secondary" type="button">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="col" id="kettle-card">
+                                        <div class="card">
+                                            <img src="Kettle.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <span class="badge rounded-pill text-bg-success">$119.99</span>
+                                                    Kettle
+                                                </h5>
+                                                <p class="card-text">You can heat the good stuff (coffee).</p>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <input id="kettle-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff" name="kettleInput">
+                                            <button id="kettle-+" class="btn btn-outline-secondary" type="button">+</button>
+                                            <button id="kettle--" class="btn btn-outline-secondary" type="button">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="col" id="silver-card">
+                                        <div class="card">
+                                            <img src="Cutlery.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <span class="badge rounded-pill text-bg-success">$59.99</span>
+                                                    Silverware
+                                                </h5>
+                                                <p class="card-text">This is just for eating. WARNING: Do not let kids from 12th grade or below use silverware in school. The dangers are __________. Thank you.</p>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <input id="silver-input" type="text" class="form-control" placeholder="0" aria-label="Amount of stuff" name="silverInput">
+                                            <button id="silver-+" class="btn btn-outline-secondary" type="button">+</button>
+                                            <button id="silver--" class="btn btn-outline-secondary" type="button">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <%- include("../partials/footer.ejs") %>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <!-- Margin -->
+                <div class="col-2"></div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            // Local Cart Variable
+            var cart = {juicer: 0,
+                mug: 0,
+                toaster: 0,
+                pot: 0,
+                kettle: 0,
+                silverware: 0}
+
+            // Prices
+            const juicerPrice = 99.99
+            const mugPrice = 19.99
+            const toasterPrice = 199.99
+            const potPrice = 249.99
+            const kettlePrice = 119.99
+            const silverPrice = 59.99
+
+            // Specific Parts of the HTML file            
+            const checkoutForm = document.getElementById('checkout-form')
+            const returnForm = document.getElementById('return-form')
+            const searchBarBrowse = document.getElementById('search-bar')
+            const searchClearButton = document.getElementById('clear-button')
+            const page2 = document.getElementById('page2')
+            const page1 = document.getElementById('page1')
+
+            // Card Inputs
+            const juicerInput = document.getElementById('juicer-input')
+            const mugInput = document.getElementById('mug-input')
+            const toasterInput = document.getElementById('toaster-input')
+            const potInput = document.getElementById('pot-input')
+            const kettleInput = document.getElementById('kettle-input')
+            const silverInput = document.getElementById('silver-input')
+
+            // Plus Buttons
+            const juicerPlus = document.getElementById('juicer-+')
+            const mugPlus = document.getElementById('mug-+')
+            const toasterPlus = document.getElementById('toaster-+')
+            const potPlus = document.getElementById('pot-+')
+            const kettlePlus = document.getElementById('kettle-+')
+            const silverPlus = document.getElementById('silver-+')
+
+            // Minus Buttons
+            const juicerMinus = document.getElementById('juicer--')
+            const mugMinus = document.getElementById('mug--')
+            const toasterMinus = document.getElementById('toaster--')
+            const potMinus = document.getElementById('pot--')
+            const kettleMinus = document.getElementById('kettle--')
+            const silverMinus = document.getElementById('silver--')
+
+            // Cards
+            const juicerCard = document.getElementById('juicer-card')
+            const mugCard = document.getElementById('mug-card')
+            const toasterCard = document.getElementById('toaster-card')
+            const potCard = document.getElementById('pot-card')
+            const kettleCard = document.getElementById('kettle-card')
+            const silverCard = document.getElementById('silver-card')
+
+            // Function to check if something is numeric.
+            function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+            }
+
+            function updateAmount(cardInput, type) {
+            if (!cardInput.value)
+            {
+            cardInput.value = 0
+            }
+
+            if (type === "plus")
+            {
+            cardInput.value = parseInt(cardInput.value) + 1
+            }
+            else if (type === "minus")
+            {
+            cardInput.value = parseInt(cardInput.value) - 1
+            }
+            }
+
+            function clearSearchBar() {
+            searchBarBrowse.value = null
+            juicerCard.classList.remove('collapse')
+            mugCard.classList.remove('collapse')
+            toasterCard.classList.remove('collapse')
+            potCard.classList.remove('collapse')
+            kettleCard.classList.remove('collapse')
+            silverCard.classList.remove('collapse')
+            }
+
+            // Search Bar Listener
+            searchBarBrowse.addEventListener('input', event => {
+
+
+
+            if (!searchBarBrowse.value) {
+            juicerCard.classList.remove('collapse')
+            mugCard.classList.remove('collapse')
+            toasterCard.classList.remove('collapse')
+            potCard.classList.remove('collapse')
+            kettleCard.classList.remove('collapse')
+            silverCard.classList.remove('collapse')
+            }
+            else {
+            if (searchBarBrowse.value.toLowerCase() != "juicer".substring(0, searchBarBrowse.value.length)) {
+                juicerCard.classList.add('collapse')
+            }
+            else {
+                juicerCard.classList.remove('collapse')
+            }
+
+            if (searchBarBrowse.value.toLowerCase() != "mug".substring(0, searchBarBrowse.value.length)) {
+                mugCard.classList.add('collapse')
+            }
+            else {
+                mugCard.classList.remove('collapse')
+            }
+
+            if (searchBarBrowse.value.toLowerCase() != "toaster".substring(0, searchBarBrowse.value.length)) {
+                toasterCard.classList.add('collapse')
+            }
+            else {  
+                toasterCard.classList.remove('collapse')
+            }
+
+            if (searchBarBrowse.value.toLowerCase() != "pot".substring(0, searchBarBrowse.value.length)) {
+                potCard.classList.add('collapse')
+            }
+            else {  
+                potCard.classList.remove('collapse')
+            }
+
+            if (searchBarBrowse.value.toLowerCase() != "kettle".substring(0, searchBarBrowse.value.length)) {
+                kettleCard.classList.add('collapse')
+            }
+            else {  
+                kettleCard.classList.remove('collapse')
+            }
+
+            if (searchBarBrowse.value.toLowerCase() != "silverware".substring(0, searchBarBrowse.value.length)) {
+                silverCard.classList.add('collapse')
+            }
+            else {  
+                silverCard.classList.remove('collapse')
+            }
+            }
+            })
+
+            // Search Bar Clear Button Listener
+            searchClearButton.addEventListener('click', event => {
+            clearSearchBar()
+            })
+
+            // Card Inputs Listeners
+            juicerInput.addEventListener('input', event => {
+            if (juicerInput.value >= 0 && isNumeric(juicerInput.value))
+            {
+            cart.juicer = parseInt(juicerInput.value)
+            }
+            else (
+            cart.juicer = 0
+            )
+            })
+            mugInput.addEventListener('input', event => {
+            if (mugInput.value >= 0 && isNumeric(mugInput.value))
+            {
+            cart.mug = parseInt(mugInput.value)
+            }
+            else (
+            cart.mug = 0
+            )
+            })
+            toasterInput.addEventListener('input', event => {
+            if (toasterInput.value >= 0 && isNumeric(toasterInput.value))
+            {
+            cart.toaster = parseInt(toasterInput.value)
+            }
+            else (
+            cart.toaster = 0
+            )
+            })
+            potInput.addEventListener('input', event => {
+            if (potInput.value >= 0 && isNumeric(potInput.value))
+            {
+            cart.pot = parseInt(potInput.value)
+            }
+            else (
+            cart.pot = 0
+            )
+            })
+            kettleInput.addEventListener('input', event => {
+            if (kettleInput.value >= 0 && isNumeric(kettleInput.value))
+            {
+            cart.kettle = parseInt(kettleInput.value)
+            }
+            else (
+            cart.kettle = 0
+            )
+            })
+            silverInput.addEventListener('input', event => {
+            if (silverInput.value >= 0 && isNumeric(silverInput.value))
+            {
+            cart.silverware = parseInt(silverInput.value)
+            }
+            else (
+            cart.silverware = 0
+            )
+            })
+
+            // Plus Buttons Listeners
+            juicerPlus.addEventListener('click', event => {
+            cart.juicer += 1;
+            updateAmount(juicerInput, "plus")
+            })
+            mugPlus.addEventListener('click', event => {
+            cart.mug += 1;
+            updateAmount(mugInput, "plus")
+            })
+            toasterPlus.addEventListener('click', event => {
+            cart.toaster += 1;
+            updateAmount(toasterInput, "plus")
+            })
+            potPlus.addEventListener('click', event => {
+            cart.pot += 1;
+            updateAmount(potInput, "plus")
+            })
+            kettlePlus.addEventListener('click', event => {
+            cart.kettle += 1;
+            updateAmount(kettleInput, "plus")
+            })
+            silverPlus.addEventListener('click', event => {
+            cart.silverware += 1;
+            updateAmount(silverInput, "plus")
+            })
+
+            // Minus Buttons Listeners
+            juicerMinus.addEventListener('click', event => {
+            if (cart.juicer > 0) 
+            {
+            cart.juicer -= 1;
+            updateAmount(juicerInput, "minus")
+            }
+            })
+            mugMinus.addEventListener('click', event => {
+            if (cart.mug > 0) 
+            {
+            cart.mug -= 1;
+            updateAmount(mugInput, "minus")
+            }
+            })
+            toasterMinus.addEventListener('click', event => {
+            if (cart.toaster > 0) 
+            {
+            cart.toaster -= 1;
+            updateAmount(toasterInput, "minus")
+            }
+            })
+            potMinus.addEventListener('click', event => {
+            if (cart.pot > 0) 
+            {
+            cart.pot -= 1;
+            updateAmount(potInput, "minus")
+            }
+            })
+            kettleMinus.addEventListener('click', event => {
+            if (cart.kettle > 0) 
+            {
+            cart.kettle -= 1;
+            updateAmount(kettleInput, "minus")
+            }
+            })
+            silverMinus.addEventListener('click', event => {
+            if (cart.silverware > 0) 
+            {
+            cart.silverware -= 1;
+            updateAmount(silverInput, "minus")
+            }
+            })
+        </script>
+    </body>
+</html>
